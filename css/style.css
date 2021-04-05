@@ -1,0 +1,8 @@
+* {
+    font-family: Arial, sans-serif;
+  }
+  
+  table,th,td {
+    border: solid rgb(173, 40, 151) 1px;
+    border-collapse: collapse;
+  }
