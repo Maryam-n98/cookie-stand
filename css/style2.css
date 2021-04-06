@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Kiwi Maru', serif;
+}
+body{
+    background-color: rgb(247, 239, 229);
+}
+header{
+    padding: 25px;
+    background-color: rgb(250, 230, 206);
+    height: 280px;
+  }
+  /* h1{
+    position: relative;
+    top: -380px;
+  } */
+  #im1{
+     margin-left: 350px;
+     position: relative;
+     top:-150px;
+  }
+  nav{
+    /* display: inline-block; */
+    margin-bottom: 30px;
+}
+nav ul{
+    /* margin-right: 500px; */
+    float: right;
+  position: relative;
+  top: -200px;
+/* margin-bottom: 50px; */
+
+}
+nav ul li a{
+    /* margin-bottom: 50px; */
+    display: inline-block;
+    /* position: relative; */
+    padding: 25px;
+    color: rgb(170, 67, 36);
+
+}
