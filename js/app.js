@@ -334,12 +334,12 @@ let finalRow =function () {
         let am6col = document.createElement('th')
         am6.appendChild(am6col);
         am6col.textContent = `total`;
+        let totalTotal = 0;
         for (let i = 0; i < hours.length; i++) {
             // let pm7 = document.createElement('tr');
             // table.appendChild(pm7);
             
             let totalPerHour = 0;
-            let totalTotal = 0;
             for (let j = 0; j < shopArr.length; j++) {
                 totalPerHour += shopArr[j].cookieNum[i] ;
                 totalTotal += shopArr[j].cookieNum[i] ;
@@ -362,6 +362,6 @@ let finalRow =function () {
       
     
         }
-    totalTh();
+    // totalTh();
     finalRow();
     
