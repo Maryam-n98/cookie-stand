@@ -287,13 +287,16 @@ let Lima= new Shop('Lima', 2, 16, 4.6);
    Paris.getCookieNum();
    Lima.getCustomerNum();
    Lima.getCookieNum();
+//    addLocation.getCustomerNum();
+//   addLocation.getCookieNum();
    let Salmon=document.getElementById('Salmon');
 let table=document.createElement('table');
 Salmon.appendChild(table);
+function header() {
 let headingRow=document.createElement('tr');
 table.appendChild(headingRow);
 
-let header= ['  ', '6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', 'Daily Location Total'];
+let header= ['Name of Location', '6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', 'Daily Location Total'];
 
 for (let i= 0; i < 16; i++) {
 
@@ -301,6 +304,8 @@ let thElement=document.createElement('th');
 headingRow.appendChild(thElement);
  thElement.textContent=header[i];  
 }
+}
+
 
 Shop.prototype.render= function () {
     let shopRow1=document.createElement('tr');
@@ -322,6 +327,7 @@ total.textContent= this.totalCookie;
 
 }
 
+header();
 Seattle.render();
 Tokyo.render();
 Dubai.render();
@@ -330,38 +336,72 @@ Lima.render();
 
 let finalRow =function () {
     let am6 = document.createElement('tr');
-        table.appendChild(am6);
-        let am6col = document.createElement('th')
-        am6.appendChild(am6col);
-        am6col.textContent = `total`;
-        let totalTotal = 0;
-        for (let i = 0; i < hours.length; i++) {
-            // let pm7 = document.createElement('tr');
-            // table.appendChild(pm7);
-            
-            let totalPerHour = 0;
-            for (let j = 0; j < shopArr.length; j++) {
-                totalPerHour += shopArr[j].cookieNum[i] ;
-                totalTotal += shopArr[j].cookieNum[i] ;
-            }
-            let footerData = document.createElement('th');
-            am6.appendChild(footerData);
-            footerData.textContent=totalPerHour;
+    table.appendChild(am6);
+    let am6col = document.createElement('th')
+    am6.appendChild(am6col);
+    am6col.textContent = `total`;
+    let totalTotal = 0;
+    for (let i = 0; i < hours.length; i++) {
+        // let pm7 = document.createElement('tr');
+        // table.appendChild(pm7);
+        
+        let totalPerHour = 0;
+        for (let j = 0; j < shopArr.length; j++) {
+            totalPerHour += shopArr[j].cookieNum[i] ;
+            totalTotal += shopArr[j].cookieNum[i] ;
         }
-        let totalTh = document.createElement('th');
-        am6.appendChild(totalTh);
-        totalTh.textContent=totalTotal;
+        let footerData = document.createElement('th');
+        am6.appendChild(footerData);
+        footerData.textContent=totalPerHour;
+    }
+    let totalTh = document.createElement('th');
+    am6.appendChild(totalTh);
+    totalTh.textContent=totalTotal;
+    
+    
+    // let totalTotal = [];
+    // for (let b = 0; b < 5 ; b++) {
         
-        
-        // let totalTotal = [];
-        // for (let b = 0; b < 5 ; b++) {
-            
         //   totalTotal += totalTotal[b]. this.totalCookie;
         // }
-       
-      
-    
-        }
+        
+        
+        
+    }
     // totalTh();
-    finalRow();
+    // finalRow();
     
+    
+    let fishForm=document.getElementById('fish');
+    console.log(fishForm);
+    
+    fishForm.addEventListener('submit',submitter);
+    
+    function submitter(event) {
+        event.preventDefault();
+        let name=event.target.nameLocation.value;
+        console.log(name);
+        let mini=event.target.min1.value;
+        console.log(mini);
+        let maxi=event.target.max1.value;
+        console.log(maxi);
+        let ava=event.target.avg1.value;
+        console.log(ava);
+        
+        let addLocation= new Shop(name,mini,maxi,ava);
+        console.log(addLocation);
+        // let added= document.getElementById('table');
+
+        table.textContent='';
+        header();
+        for (let i=0; i< shopArr.length; i++){
+        // addLocation.getCustomerNum();
+        // addLocation.getCookieNum();
+        // addLocation.render();
+              shopArr[i].getCustomerNum();
+              shopArr[i].getCookieNum();
+             shopArr[i].render();
+            }
+            finalRow();
+    }
+    finalRow();
