@@ -1,12 +1,103 @@
-* {
-    font-family: Arial, sans-serif;
-  }
+*{
+  box-sizing: border-box;
+  /* font-family: 'Kiwi Maru', serif; */
+}
+h1{
+font-family: 'Dancing Script', cursive;
+font-style: italic;
+color: #4b626e;  
+}
+body{
+  background-color: #f0ece3;
+}
+header{
+  padding: 25px;
+  background-color:#dfd3c3;
+  height: 200px;
+}
   
-  table,th,td {
+  .im111 {
+    animation: im111 ease-in-out 1s infinite alternate;
+    transform-origin: center -20px;
+    float:left;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+  }
+
+   /* .im11{
+    border: 5px solid #f8f8f8;
+    display: block;
+} */
+.im111:after{
+    content: '';
+    position: absolute;  
+    width: 20px; height: 20px;  
+    border: 1px solid #999;
+    top: -10px; left: 50%;
+    z-index: 0;
+    border-bottom: none;
+    border-right: none;
+    transform: rotate(45deg);
+}
+/* nail */
+.im111:before{
+    content: '';
+    position: absolute;
+    width: 5px; height: 5px;
+    toground: #000;
+}
+ 
+@keyframes im111 {
+    0% { transform: rotate(3deg); }
+    100% { transform: rotate(-3deg); }
+                }
+   p:-14px;lef: 54%;
+    z-index: 5;
+    border-radius: 50% 50%;
+    back
+    }
+    nav{
+      text-decoration: none;
+       display: inline;
+       /* margin-bottom: 30px; */
+   }
+   nav ul{
+     text-decoration: none;
+       /* margin-right: 500px; */
+       float: right;
+     position: relative;
+   
+     top: -50px;
+   /* margin-bottom: 50px; */
+   
+   }
+   nav ul  a{
+     text-decoration: none;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+       /* margin-bottom: 50px; */
+       display: inline-block;
+       /* position: relative; */
+       padding: 25px;
+       color: #596e79;
+   
+   }
+   #fish{
+     color: #596e79;
+     border: none;
+     /* background-color: #dfd3c386; */
+   }
+   table,th,td {
+    background-color: #dfd3c3;
+    color: #596e79;
+    border: solid #596e79 1px;
+    border-collapse: collapse;
+  } 
+  /* margin-bottom: 30px;
+/* }
+   table,th,td {
     background-color: rgb(204, 175, 131);
     border: solid rgb(148, 69, 32) 1px;
     border-collapse: collapse;
-  }
+  } 
 #fish{
   background-color: rgb(204, 175, 131);
 }
@@ -29,4 +120,53 @@ h1{
 }
 image{
   float: left;
+} */
+
+#left{
+  display: inline;
+ margin-left: 1320px;
+ width: 500px;
+ height: 400px;
+}
+
+
+footer{
+ height: 100%;
+ width: 100%;
+  display: inline;
+  background-color: #596e79;
+
+}
+
+#fo{
+  color: #596e79;
+  display: inline;
+  position: relative;
+  left: 870px;
+  top: 100px;
+}
+#foo{
+  color: #596e79;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+#name1{
+  color: #596e79;
+  background-color: #dfd3c3;
+}
+#num{
+  color:  #dfd3c3;
+  background-color: #596e79;
+}
+#em{
+  color: #596e79;
+  background-color: #dfd3c3;
+
+}
+#add{
+  color:  #dfd3c3;
+  background-color: #596e79;
+}
+footer label{
+color: #596e79;
 }

@@ -398,10 +398,11 @@ let finalRow =function () {
         // addLocation.getCustomerNum();
         // addLocation.getCookieNum();
         // addLocation.render();
+        
               shopArr[i].getCustomerNum();
               shopArr[i].getCookieNum();
              shopArr[i].render();
             }
-            finalRow();
+            // finalRow();
     }
     finalRow();
